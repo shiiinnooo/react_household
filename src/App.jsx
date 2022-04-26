@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetch = () => {
-      const api = '/api/v1/rest/datastore/301000000A-000082-049?limit=2000';
+      const api = '/api/v1/rest/datastore/301000000A-000082-049';
       axios.get(api).then((res) => {
         if (res.status === 200) {
           const temp = res.data.result.records.filter(item => item.site_id.includes('臺北市'));
